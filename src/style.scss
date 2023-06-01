@@ -1,0 +1,272 @@
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.loginContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 224, 230);
+
+  .loginWrapper {
+    height: 200px;
+    width: 250px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    form {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      input {
+        padding: 10px;
+      }
+      button {
+        padding: 10px 5px;
+        background-color: pink;
+        border: none;
+      }
+    }
+    p {
+      margin-top: 10px;
+      font-size: 15px;
+    }
+  }
+}
+.regContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(254, 231, 190);
+
+  .regWrapper {
+    width: 250px;
+    padding: 10px 2px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    form {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      input {
+        padding: 10px;
+      }
+      button {
+        padding: 10px 5px;
+        background-color: rgb(252, 203, 111);
+        border: none;
+      }
+    }
+    p {
+      margin-top: 10px;
+      font-size: 15px;
+    }
+  }
+}
+.navContainer {
+  width: 100vw;
+  height: 5vh;
+  background: burlywood;
+  display: flex;
+  align-items: center;
+
+  h4 {
+    flex: 1;
+    padding: 0px 5px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .navPages {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        font-weight: bold;
+        color: blue;
+      }
+    }
+  }
+}
+
+.homeContainer {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(249, 239, 225);
+  // background-color: black;
+
+  .homeWrapper {
+    overflow: hidden;
+    border-radius: 10px;
+
+    width: 60%;
+    height: 90%;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    overflow: scroll;
+
+    @include mobile {
+      width: 95%;
+    }
+    @include tablet {
+      width: 80%;
+    }
+
+    .btnContainer {
+      width: 90%;
+
+      padding: 5px 0px 5px 0px;
+      display: flex;
+
+      justify-content: space-between;
+      gap: 10px;
+
+      .toggle {
+        background-color: white;
+        border: 1px solid black;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        padding: 5px;
+        cursor: pointer;
+      }
+      .add {
+        background-color: white;
+        border: 1px solid black;
+        font-size: 16px;
+        font-weight: bolder;
+        letter-spacing: 1px;
+
+        padding: 5px;
+        cursor: pointer;
+      }
+    }
+
+    .notesContainer {
+      width: 90%;
+      padding: 20px;
+      background: white;
+      margin-bottom: 10px;
+      border-radius: 10px;
+
+      .notesWrapper {
+        .notesHeader {
+          display: flex;
+          h3 {
+            flex: 1;
+            font-weight: bold;
+          }
+          .notesIcons {
+            display: flex;
+            gap: 10px;
+            #delete {
+              cursor: pointer;
+              &:hover {
+                color: red;
+              }
+            }
+            #edit {
+              cursor: pointer;
+              &:hover {
+                color: rgb(51, 0, 254);
+              }
+            }
+          }
+          .notesBody {
+            padding-top: 5px;
+            p {
+              font-size: 16px;
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.modalContainer {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .modalWrapper {
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    background-color: white;
+    form {
+      padding: 5px 10px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      input {
+        padding: 5px 10px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        font-size: 12px;
+      }
+      .btnContainer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 5px;
+        button {
+          padding: 2px 5px;
+          border: none;
+          border-radius: 2px;
+        }
+        #update {
+          font-weight: 700;
+          &:hover {
+            background-color: greenyellow;
+          }
+        }
+        #cancel {
+          font-weight: 700;
+          &:hover {
+            background-color: rgb(253, 68, 68);
+          }
+        }
+      }
+    }
+  }
+}
