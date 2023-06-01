@@ -19,7 +19,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const result = await axios.post("http://localhost:4000/api/auth/", user);
+      const result = await axios.post("https://onenote-backend.onrender.com/api/auth/", user);
       console.log(result.data);
       alert(result.data.msg);
       result.data.status && navigate("/login")

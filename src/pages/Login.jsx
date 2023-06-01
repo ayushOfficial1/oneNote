@@ -28,7 +28,7 @@ const Login = () => {
 
     try {
       const result = await axios.post(
-        "http://localhost:4000/api/auth/login",
+        "https://onenote-backend.onrender.com/api/auth/login",
         user
       );
       result && alert(result.data.msg);

@@ -13,7 +13,7 @@ const AddModal = ({ setAddModal }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(details);
-    addnote( details );
+    addnote(details);
     setAddModal(false);
   };
 

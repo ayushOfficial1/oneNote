@@ -9,9 +9,12 @@ const NoteState = (props) => {
 
   const getNotes = async () => {
     try {
-      const result = await axios.get("http://localhost:4000/api/notes/", {
-        headers,
-      });
+      const result = await axios.get(
+        "https://onenote-backend.onrender.com/api/notes/",
+        {
+          headers,
+        }
+      );
       console.log(result.data);
       setnotes(result.data);
     } catch (error) {
@@ -22,7 +25,7 @@ const NoteState = (props) => {
   const addnote = async (note) => {
     try {
       const result = await axios.post(
-        "http://localhost:4000/api/notes/",
+        "https://onenote-backend.onrender.com/api/notes/",
         note,
         { headers }
       );
@@ -36,7 +39,7 @@ const NoteState = (props) => {
   const deletenote = async (id) => {
     try {
       const result = await axios.delete(
-        `http://localhost:4000/api/notes/${id}`,
+        `https://onenote-backend.onrender.com/api/notes/${id}`,
         {
           headers,
         }
@@ -51,7 +54,7 @@ const NoteState = (props) => {
   const editnote = async ({ details, id }) => {
     try {
       const result = await axios.put(
-        `http://localhost:4000/api/notes/${id}`,
+        `https://onenote-backend.onrender.com/api/notes/${id}`,
         details,
         {
           headers,
