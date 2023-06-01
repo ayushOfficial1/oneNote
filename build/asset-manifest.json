@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/oneNote/static/css/main.f09620e5.css",
+    "main.js": "/oneNote/static/js/main.90544bdc.js",
+    "index.html": "/oneNote/index.html",
+    "main.f09620e5.css.map": "/oneNote/static/css/main.f09620e5.css.map",
+    "main.90544bdc.js.map": "/oneNote/static/js/main.90544bdc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f09620e5.css",
+    "static/js/main.90544bdc.js"
+  ]
+}

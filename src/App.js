@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <NoteState>
-        <BrowserRouter>
+        <BrowserRouter basename="oneNote">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
