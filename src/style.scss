@@ -1,10 +1,10 @@
 @mixin mobile {
-  @media (max-width: 600px) {
+  @media (min-width: 100px) {
     @content;
   }
 }
 @mixin tablet {
-  @media (max-width: 1000px) {
+  @media (min-width: 700px) {
     @content;
   }
 }
@@ -133,14 +133,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+
     overflow: scroll;
 
     @include mobile {
-      width: 95%;
+      width: 98%;
     }
     @include tablet {
-      width: 80%;
+      width: 90%;
     }
 
     .btnContainer {
@@ -180,6 +180,10 @@
       background: white;
       margin-bottom: 10px;
       border-radius: 10px;
+
+      @include mobile {
+        width: 85%;
+      }
 
       .notesWrapper {
         .notesHeader {
